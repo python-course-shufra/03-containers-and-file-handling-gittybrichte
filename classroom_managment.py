@@ -85,10 +85,9 @@ def avg_grade(name, profession):
 
 def get_professions(name):
     """Returns a list of unique professions that student has grades in"""
-    lst=[]
+    lst=set()
     for i in classroom[index(name)]['grades']:
-        lst.append(i[0])
-    lst=set(lst)    
+        lst.add(i[0])   
     return lst    
     pass
 
